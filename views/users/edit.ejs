@@ -1,0 +1,33 @@
+<div id="map"></div>
+<div class="map-black">
+  <div class="map-overlayEdit">
+    <p>Please <%= user.name %> enter a park</p>
+
+<form method="POST" action="/users/<%= user.id %>">
+  <input type="hidden" name="_method" value="PUT">
+
+  <input type="hidden" name="park[placeId]">
+  <input type="hidden" name="park[name]">
+  <input type="hidden" name="park[lat]">
+  <input type="hidden" name="park[lng]">
+
+  <div>
+    <input type="text" name="username" value="<%= user.name %>" placeholder="Username">
+  </div>
+  <div>
+    <input type="text" name="email" value="<%= user.email %>" placeholder="email">
+  </div>
+  <div>
+    <input type="text" name="address" value="<%= user.address %>" placeholder="Address">
+  </div>
+
+  <div>
+    <input type="text" class="autocomplete" placeholder="Enter Your Favourite Park">
+  </div>
+
+  <%# <div id="map"></div>%>
+
+  <button>Update</button>
+</form>
+</div>
+</div>

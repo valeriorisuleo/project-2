@@ -1,0 +1,10 @@
+<div id="map" data-markers="<%= JSON.stringify(markers) %>"></div>
+
+<% if(!locals.isAuthenticated) { %>
+<img src="images/logo.png" class="logo">
+<div class="map-black"></div>
+<audio>
+  <source autoplay="true" src="/assets/sounds/who.mp3" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
+<% } %>

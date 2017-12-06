@@ -1,0 +1,15 @@
+<div id="map"></div>
+<div class="map-black">
+  <div class="map-overlayNewDog">
+    <p>WHO IS YOUR DOG ?</p>
+<form action="/users/<%=user.id%>/dogs" method="post">
+  <input type="text" name="name" id="name" placeholder="Name">
+  <input type="number" name="age" id="age" placeholder="Age">
+  <input type="text" name="breed" id="breed" placeholder="Breed">
+  <input type="text" name="size" id="size" placeholder="Size">
+  <input type="text" name="attitude" id="attitude" placeholder="Attitude">
+  <input type="text" name="image" id="image" placeholder="Image">
+  <button>Add Dog</button>
+</form>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div id="pac-container">
+  <input id="pac-input" type="text"
+  placeholder="Enter a Park">
+</div>
+<div id="map"></div>
+
+<form method="POST" action="/parks">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name" value="" required readonly="readonly">
+  </div>
+  <div>
+    <label for="name">Address</label>
+    <input type="text" name="address" value="" required readonly="readonly">
+  </div>
+  <input type="hidden" name="lat" value="">
+  <input type="hidden" name="lng" value="">
+  <button>Add</button>
+</form>

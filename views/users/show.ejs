@@ -1,0 +1,34 @@
+<div id="map"></div>
+<div class="map-black">
+  <div class="map-overlayUserShow">
+
+    <a href="/users/<%= user.id %>/dogs/new"><button>Add a Dog</button></a>
+  <% user.dogs.forEach((dog) => { %>
+    <div class="singleDog">
+      <div class="dogPic"><img src="<%= dog.image %>" alt="<%= dog.name %>"></div>
+      <div class="info">
+        <div id="dogName"><p><%= dog.name %><p></div>
+        <div id="dogBreed"><p><%= dog.breed %><p></div>
+        <div id="dogAttitude"><p><%= dog.attitude %><p></div>
+      </div>
+
+      <div class="buttonDog">
+        <form method="POST" action="/users/<%= user.id %>/dogs/<%= dog.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <button>Delete</button>
+        </form>
+      </div>
+    </div>
+  <% }) %>
+
+    <div class="wback">
+      <h4>Username: <%= user.name %></h4>
+      <p>Email: <%= user.email %></p>
+      <p>Address: <%= user.address %></p>
+      <p>Favourite Park: <%= user.park ? user.park.name : 'Non set' %></p>
+      <a href="/users/<%= user.id %>/edit">Edit user details</a>
+    </div>
+
+
+  </div>
+</div>
